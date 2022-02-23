@@ -1,0 +1,62 @@
+body {
+    font-family: 'Inter', sans-serif;
+    /*font-family: 'Lexend Deca', sans-serif;*/
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+main {
+    background-color: orangered;
+    width: 67.5rem;
+    display: flex;
+}
+
+#text-container {
+    flex-basis: 50%;
+    flex-grow: 0;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 33.3% 33.3% 33.3%;
+    grid-template-areas: "header header header"
+                         "intro intro intro"
+                         "companies templates queries";
+    padding: 1rem;                     
+}
+
+#main-header {
+    grid-area: header;
+}
+
+#intro {
+    grid-area: intro;
+}
+
+#companies {
+    grid-area: companies;
+}
+
+#templates {
+    grid-area: templates;
+}
+
+#queries {
+    grid-area: queries;
+}
+
+#img-container {
+    grid-area: side-image;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/********/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
