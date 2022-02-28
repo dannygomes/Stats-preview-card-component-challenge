@@ -7,30 +7,32 @@ body {
     justify-content: center;
     align-items: center;
     background-color: hsl(233, 47%, 7%);
+    font-size: 0.93rem;
 }
 
 main {
     background-color: hsl(244, 38%, 16%);
     width: 67.5rem;
     display: flex;
+    border-radius: 1rem;
 }
 
 #text-container {
     flex-basis: 50%;
     flex-grow: 0;
     display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-columns: 30.3% 30.3% 30.3%;
     grid-template-rows: 33.5% 37.5% 25%;
     grid-template-areas: "header header header"
                          "intro intro intro"
                          "companies templates queries";
-    padding: 3rem;                     
+    padding: 3rem 1rem 3rem 3rem;                     
     box-sizing: border-box; 
 }
 
 #main-header {
     grid-area: header;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     color: hsl(0, 0%, 100%);
 }
 
@@ -41,8 +43,8 @@ main {
 #intro {
     grid-area: intro;
     line-height: 1.5rem;
-    color: hsla(0, 0%, 100%, 0.75);
-    font-size: 1rem;
+    color: hsla(0, 0%, 100%, 0.6);
+    padding-right: 5rem;
 }
 
 .stat {
@@ -78,6 +80,7 @@ main {
 img {
     display: block;
     max-width: 100%;
+    border-radius: 0 1rem 1rem 0;
 }
 
 #img-container::after {
@@ -88,9 +91,53 @@ img {
     width: 100%;
     height: 100%;
     background-color: rgba(110, 1, 124, 0.637);
+    border-radius: 0 1rem 1rem 0;
+}
+
+
+@media (max-width:1200px) {
+ main {
+     flex-direction: column-reverse;
+     width: 22rem;
+ }
+
+ body {
+     font-size: 1rem;
+     text-align: center;
+ }
+
+ #text-container {
+     display: flex;
+     flex-direction: column;
+     padding: 2rem;
+ }
+
+ #main-header {
+     font-size: 1.8rem;   
+ }
+
+ #intro {
+     margin-top: 1rem;
+     padding-right: 0;
+ }
+
+ img {
+    display: block;
+    max-width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+ #img-container::after {
+    border-radius: 1rem 1rem 0 0;
+}
+
+.stat {
+    margin-top: 1rem;
+}
+
 }
 
 
 /********/
-.attribution { font-size: 11px; text-align: center; }
+.attribution { font-size: 11px; text-align: center; color: white; }
 .attribution a { color: hsl(228, 45%, 44%); }
